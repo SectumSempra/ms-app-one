@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 public interface AppOneController {
 
     @RequestMapping(value = "/region-list-all", method = RequestMethod.GET)
-    public ResponseEntity< ? > listAll();
+    public ResponseEntity< ? > regionListAll();
+
+    @RequestMapping(value = "/job-feign-list-all", method = RequestMethod.GET)
+    public ResponseEntity< ? > jobFeignListAll();
 
 }
