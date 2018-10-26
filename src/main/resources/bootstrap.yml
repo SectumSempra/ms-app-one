@@ -13,4 +13,4 @@ server:
  ############   
 eureka:
   instance:
-    instance-id : ${spring.application.name}:${server.port}:${random.value}     
+    instance-id : ${spring.application.name}:${ip}:${spring.profiles.active}:${server.port} 

@@ -40,11 +40,10 @@ public class AppOneApplication {
     }
 
     public static void main(String[] args) throws Exception {
-//        SpringApplication application = new SpringApplication(AppOneApplication.class);
-//        application.setDefaultProperties(getMap());
-//        application.run(args);
+        SpringApplication application = new SpringApplication(AppOneApplication.class);
+        application.setDefaultProperties(getMap());
+        application.run(args);
 
-        SpringApplication.run(AppOneApplication.class, args);
     }
 
 }
