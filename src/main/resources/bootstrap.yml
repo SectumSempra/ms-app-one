@@ -6,11 +6,15 @@ spring:
   cloud:
     config:
       uri: http://10.6.221.129:10010      
+      allow-override: false  
 ############     
 server:
   servlet:
-   context-path: /app-one-api/    
+   context-path: /app-one-api   
  ############   
 eureka:
   instance:
     instance-id : ${spring.application.name}:${ip}:${spring.profiles.active}:${server.port} 
+    lease-renewal-interval-in-seconds: 5
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
