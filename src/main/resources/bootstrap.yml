@@ -18,3 +18,11 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     status-page-url-path: ${server.servlet.context-path}/actuator/info
     health-check-url-path: ${server.servlet.context-path}/actuator/health
+##########################
+info:
+  app:
+   name : ${spring.application.name}
+   description: '@project.description@'
+   version: '@project.version@'
+   java:
+    version: '@java.version@'
