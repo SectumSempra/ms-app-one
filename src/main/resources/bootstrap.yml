@@ -2,9 +2,11 @@ spring:
   application:
     name: app-one-services   
   profiles:
-     active: default
+     active: local
   cloud:
     config:
       uri: http://10.6.221.129:10010      
 ############     
-    
+server:
+  servlet:
+   context-path: /app-one-api/    
