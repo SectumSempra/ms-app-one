@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 /**
  * The persistent class for the locations database table.
- * 
+ *
  */
 @Entity
 @Table(name="locations")
@@ -25,7 +25,7 @@ public class Location implements Serializable {
 
 	private String city;
 
-	@Column(name="country_id" ,columnDefinition = "bpchar(2)")
+	@Column(name="country_id" )
 	private String countryId;
 
 	@Column(name="postal_code")

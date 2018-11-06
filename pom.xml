@@ -40,7 +40,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>	
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -107,16 +107,18 @@
 		<resources>
 			<resource>
 				<filtering>true</filtering>
-				<directory> src/main/resources/</directory>
+				<directory>src/main/resources/</directory>
 				<includes>
 					<include>*.yml</include>
 				</includes>
 			</resource>
 			<resource>
+				<targetPath>scripts</targetPath>
 				<filtering>true</filtering>
-				<directory> src/main/resources/scripts</directory>
+				<directory>src/main/resources/scripts</directory>
 				<includes>
 					<include>*.sql</include>
+					<!-- <include>scripts/</include> -->
 				</includes>
 			</resource>
 		</resources>
