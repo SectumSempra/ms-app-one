@@ -39,3 +39,9 @@ eureka:
 app-two-services:
    ribbon:
     listOfServers: localhost:10001, localhost:10002
+#########################################################         
+info:
+  application:
+    name : ${spring.application.name}      
+          
+    
