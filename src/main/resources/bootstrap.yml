@@ -1,14 +1,11 @@
 spring:
   application:
-    name: app-one-services   
+    name: app-one-services 
   profiles: 
     active: local    
-  cloud:    
-    config:
-      uri: http://10.6.221.129:10010      
-      allow-override: false  
-       
-      
+  cloud: 
+    config:  
+      allow-override: false       
 ############     
 server:
   servlet:
