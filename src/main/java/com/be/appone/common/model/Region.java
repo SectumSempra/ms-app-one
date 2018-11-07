@@ -1,46 +1,48 @@
 package com.be.appone.common.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
 
 /**
  * The persistent class for the regions database table.
+ * 
  */
 @Entity
-@Table(name = "regions")
+@Table(name="regions")
+@NamedQuery(name="Region.findAll", query="SELECT r FROM Region r")
 public class Region implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @Id
-    @Column(name = "region_id")
-    private Integer regionId;
+	@Id
+	@Column(name="region_id")
+	private Integer regionId;
 
-    @Column(name = "region_name")
-    private String regionName;
+	@Column(name="region_name")
+	private String regionName;
 
-    public Region() {
-    }
+	public Region() {
+	}
 
-    public Region(Integer regionId, String regionName) {
-        super();
-        this.regionId = regionId;
-        this.regionName = regionName;
-    }
+	public Integer getRegionId() {
+		return this.regionId;
+	}
 
-    public Integer getRegionId() {
-        return this.regionId;
-    }
+	public void setRegionId(Integer regionId) {
+		this.regionId = regionId;
+	}
 
-    public void setRegionId(Integer regionId) {
-        this.regionId = regionId;
-    }
+	public String getRegionName() {
+		return this.regionName;
+	}
 
-    public String getRegionName() {
-        return this.regionName;
-    }
-
-    public void setRegionName(String regionName) {
-        this.regionName = regionName;
-    }
+	public void setRegionName(String regionName) {
+		this.regionName = regionName;
+	}
 
 }
